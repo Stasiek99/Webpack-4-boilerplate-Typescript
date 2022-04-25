@@ -6,7 +6,7 @@ const testMessage: string = 'TypeScript works';
 
 console.log(testMessage);
 
-function chooseNumber() {
+function chooseNumber(): void {
     const drawTicket = Math.floor((Math.random() * 100) + 1);
     let number;
     let howMany = 0;
