@@ -7,38 +7,38 @@ const testMessage: string = 'TypeScript works';
 console.log(testMessage);
 
 function chooseNumber() {
-    const los = Math.floor((Math.random() * 100) + 1);
-    let liczba;
-    let ile = 0;
+    const drawTicket = Math.floor((Math.random() * 100) + 1);
+    let number;
+    let howMany = 0;
 
     do {
-        liczba = parseInt(prompt("Podaj liczbe !"));
-        ile = ile + 1
+        number = parseInt(prompt("Podaj liczbe !"));
+        howMany = howMany + 1
 
-        if (liczba > los) {
+        if (number > drawTicket) {
             console.log("To za duzo")
-        } else if (liczba < los) {
+        } else if (number < drawTicket) {
             console.log("To za malo")
-        } else if (liczba == los) {
+        } else if (number == drawTicket) {
             console.log("Wygraleś")
             let dec = prompt("Czy chcesz zagrac jeszcze raz ? T/N");
             if (dec == "T") {
-                ile = 0;
+                howMany = 0;
                 continue;
             } else {
                 break;
             }
         }
 
-        if (ile == 20 && liczba != los) {
+        if (howMany == 20 && number != drawTicket) {
             console.log("Przegrales")
             let dec = prompt("Czy chcesz zagrac jeszcze raz ? T/N");
             if (dec == "T") {
-                ile = 0;
+                howMany = 0;
             } else {
                 break;
             }
         }
-    } while (liczba != los)
+    } while(number != drawTicket)
 }
 chooseNumber()
