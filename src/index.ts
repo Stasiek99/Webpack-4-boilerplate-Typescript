@@ -7,7 +7,7 @@ const testMessage: string = 'TypeScript works';
 console.log(testMessage);
 
 function chooseNumber() {
-    let los = Math.floor((Math.random() * 100) + 1);
+    const los = Math.floor((Math.random() * 100) + 1);
     let liczba;
     let ile = 0;
 
