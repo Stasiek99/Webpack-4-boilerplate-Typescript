@@ -6,11 +6,10 @@ const testMessage: string = 'TypeScript works';
 
 console.log(testMessage);
 
-let los = Math.floor((Math.random() * 100) + 1);
-let liczba;
-let ile = 0;
-
 function chooseNumber() {
+    let los = Math.floor((Math.random() * 100) + 1);
+    let liczba;
+    let ile = 0;
 
     do {
         liczba = parseInt(prompt("Podaj liczbe !"));
