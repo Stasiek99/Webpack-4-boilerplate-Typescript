@@ -1,4 +1,5 @@
 import './styles/style.scss';
+import { htmlElementConnector } from './utils';
 
 console.log('hello, world');
 
@@ -41,4 +42,24 @@ function chooseNumber(): void {
         }
     } while(number != drawTicket)
 }
-chooseNumber()
+// chooseNumber()
+
+const addEventListenerButton= document.getElementById("addEventListenerButton") as HTMLButtonElement
+const connectorButton= document.getElementById("connectorButton") as HTMLButtonElement
+
+function hello() {
+    console.log('hello')
+}
+
+
+function hello2() {
+    console.log('hello2')
+}
+
+
+addEventListenerButton.addEventListener('click', hello)
+htmlElementConnector(connectorButton,'click',hello2)
+
+
+
+
