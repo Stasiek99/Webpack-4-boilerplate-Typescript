@@ -6,6 +6,7 @@ const testMessage: string = 'TypeScript works';
 
 console.log(testMessage);
 
+console.log("zamiast gry");
 function chooseNumber(): void {
     const drawTicket = Math.floor((Math.random() * 100) + 1);
     let number;
@@ -41,4 +42,19 @@ function chooseNumber(): void {
         }
     } while(number != drawTicket)
 }
-chooseNumber()
+
+
+
+const btn = document.getElementById('responsiveButton')
+
+    function fn(btn:any):void {
+        btn.onclick = chooseNumber
+
+    }
+    // html szkielet aplikacji ->
+
+        // .ts logika aplikacji + dostep do całego szkieletu => wezElement(button) ,
+        // napisac polaczenie szkieletu z logika infrastruktury
+        //
+fn(btn)
+
