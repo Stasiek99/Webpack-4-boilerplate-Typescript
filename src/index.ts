@@ -69,3 +69,7 @@ const btn2 = document.getElementById('responsiveButton2')
         btn2.onclick = getPersonalData
     }
 hello(btn2)
+function cursorOnButton(){
+    console.log("Cursor on the button");
+}
+document.getElementById("responsiveButton").onmouseover = function() {cursorOnButton()};
