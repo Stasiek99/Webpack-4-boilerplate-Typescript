@@ -2,15 +2,22 @@
 *:before,
 *:after {
   box-sizing: inherit;
+  background: #D2E4E2;
 }
 
 html {
   box-sizing: border-box;
   color: $primary-color;
   font-family: $primary-font;
-  background: #f1f1f1;
+  background: #D2E4E2;
 }
 
 .center {
-  text-align: center
+  text-align: center;
+  background: #D2E4E2;
+  color: #473F3A;
 }
+
+
+
+
