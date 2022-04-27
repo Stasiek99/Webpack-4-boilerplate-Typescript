@@ -44,7 +44,7 @@ function chooseNumber(): void {
 }
 
 
-const btn = document.getElementById('responsiveButton')
+let btn = document.getElementById('responsiveButton')
 
     function fn(btn:any):void {
         btn.onclick = chooseNumber
@@ -55,7 +55,7 @@ const btn = document.getElementById('responsiveButton')
         // .ts logika aplikacji + dostep do całego szkieletu => wezElement(button) ,
         // napisac polaczenie szkieletu z logika infrastruktury
         //
-fn(btn)
+fn(btn);
 
 function getPersonalData(){
         let firstName = prompt("Type your First Name!");
@@ -68,8 +68,14 @@ const btn2 = document.getElementById('responsiveButton2')
     function hello(btn2:any) {
         btn2.onclick = getPersonalData
     }
-hello(btn2)
+hello(btn2);
+
 function cursorOnButton(){
     console.log("Cursor on the button");
 }
 document.getElementById("responsiveButton").onmouseover = function() {cursorOnButton()};
+
+function changeColor(btn:any){
+    btn.style.background = "#79462C";
+}
+document.getElementById("responsiveButton").onclick = function() {changeColor(btn)};
