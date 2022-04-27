@@ -44,7 +44,6 @@ function chooseNumber(): void {
 }
 
 
-
 const btn = document.getElementById('responsiveButton')
 
     function fn(btn:any):void {
@@ -58,3 +57,15 @@ const btn = document.getElementById('responsiveButton')
         //
 fn(btn)
 
+function getPersonalData(){
+        let firstName = prompt("Type your First Name!");
+        let lastName = prompt("Type your Last Name!");
+        console.log(`Hello ${firstName} ${lastName}!`)
+
+}
+const btn2 = document.getElementById('responsiveButton2')
+
+    function hello(btn2:any) {
+        btn2.onclick = getPersonalData
+    }
+hello(btn2)
