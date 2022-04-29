@@ -1,4 +1,5 @@
 import './styles/style.scss';
+import { htmlElementConnector } from './utils';
 
 console.log('hello, world');
 
@@ -6,7 +7,15 @@ const testMessage: string = 'TypeScript works';
 
 console.log(testMessage);
 
-console.log("zamiast gry");
+const addEventListenerButton= document.getElementById("addEventListenerButton") as HTMLButtonElement
+const connectorButton= document.getElementById("connectorButton") as HTMLButtonElement
+
+function cursorOnButton(){
+    console.log("Cursor on the button");
+}
+function changeColor(){
+    addEventListenerButton.style.background = "#79462C";
+}
 function chooseNumber(): void {
     const drawTicket = Math.floor((Math.random() * 100) + 1);
     let number;
@@ -43,39 +52,22 @@ function chooseNumber(): void {
     } while(number != drawTicket)
 }
 
+function getPersonalData(){
+    let firstName = prompt("Type your First Name!");
+    let lastName = prompt("Type your Last Name!");
+    console.log(`Hello ${firstName} ${lastName}!`)
 
-let btn = document.getElementById('responsiveButton')
+}
 
-    function fn(btn:any):void {
-        btn.onclick = chooseNumber
-
-    }
     // html szkielet aplikacji ->
 
         // .ts logika aplikacji + dostep do całego szkieletu => wezElement(button) ,
         // napisac polaczenie szkieletu z logika infrastruktury
         //
-fn(btn);
+document.getElementById("addEventListenerButton").onmouseover = function() {cursorOnButton()};
 
-function getPersonalData(){
-        let firstName = prompt("Type your First Name!");
-        let lastName = prompt("Type your Last Name!");
-        console.log(`Hello ${firstName} ${lastName}!`)
+addEventListenerButton.addEventListener('click', chooseNumber);
+addEventListenerButton.addEventListener('click', changeColor);
+htmlElementConnector(connectorButton, 'click', getPersonalData)
 
-}
-const btn2 = document.getElementById('responsiveButton2')
 
-    function hello(btn2:any) {
-        btn2.onclick = getPersonalData
-    }
-hello(btn2);
-
-function cursorOnButton(){
-    console.log("Cursor on the button");
-}
-document.getElementById("responsiveButton").onmouseover = function() {cursorOnButton()};
-
-function changeColor(btn:any){
-    btn.style.background = "#79462C";
-}
-document.getElementById("responsiveButton").onclick = function() {changeColor(btn)};
