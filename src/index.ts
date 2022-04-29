@@ -7,8 +7,9 @@ const testMessage: string = 'TypeScript works';
 
 console.log(testMessage);
 
-const addEventListenerButton= document.getElementById("addEventListenerButton") as HTMLButtonElement
-const connectorButton= document.getElementById("connectorButton") as HTMLButtonElement
+const addEventListenerButton= document.getElementById("addEventListenerButton") as HTMLButtonElement;
+const connectorButton= document.getElementById("connectorButton") as HTMLButtonElement;
+const gradientColor = document.getElementById("changeClass") as HTMLButtonElement;
 
 function cursorOnButton(){
     console.log("Cursor on the button");
@@ -59,6 +60,10 @@ function getPersonalData(){
 
 }
 
+function gradientColorChange(){
+    gradientColor.className ="button2";
+}
+
     // html szkielet aplikacji ->
 
         // .ts logika aplikacji + dostep do całego szkieletu => wezElement(button) ,
@@ -68,6 +73,5 @@ document.getElementById("addEventListenerButton").onmouseover = function() {curs
 
 addEventListenerButton.addEventListener('click', chooseNumber);
 addEventListenerButton.addEventListener('click', changeColor);
-htmlElementConnector(connectorButton, 'click', getPersonalData)
-
-
+htmlElementConnector(connectorButton, 'click', getPersonalData);
+gradientColor.addEventListener('click', gradientColorChange);
