@@ -1,44 +1,21 @@
 import './styles/style.scss';
-
-console.log('hello, world');
+import {cursorOnButton} from './event-side-effects';
+import {changeColor} from "./event-side-effects";
+import {getPersonalData} from "./event-side-effects";
+import {gradientColorChange} from "./event-side-effects";
+import {gameButton} from "./event-side-effects";
+import {connectorButton} from "./event-side-effects";
+import {gradientColor} from "./event-side-effects";
+import {chooseNumber} from "./event-side-effects";
 
 const testMessage: string = 'TypeScript works';
 
+console.log('hello, world');
 console.log(testMessage);
 
-function chooseNumber(): void {
-    const drawTicket = Math.floor((Math.random() * 100) + 1);
-    let number;
-    let howMany = 0;
+document.getElementById("simpleGame").onmouseover = function() {cursorOnButton()};
 
-    do {
-        number = parseInt(prompt("Podaj liczbe !"));
-        howMany = howMany + 1
-
-        if (number > drawTicket) {
-            console.log("To za duzo")
-        } else if (number < drawTicket) {
-            console.log("To za malo")
-        } else if (number == drawTicket) {
-            console.log("Wygraleś")
-            let dec = prompt("Czy chcesz zagrac jeszcze raz ? T/N");
-            if (dec == "T") {
-                howMany = 0;
-                continue;
-            } else {
-                break;
-            }
-        }
-
-        if (howMany == 20 && number != drawTicket) {
-            console.log("Przegrales")
-            let dec = prompt("Czy chcesz zagrac jeszcze raz ? T/N");
-            if (dec == "T") {
-                howMany = 0;
-            } else {
-                break;
-            }
-        }
-    } while(number != drawTicket)
-}
-chooseNumber()
+gameButton.addEventListener('click', chooseNumber);
+gameButton.addEventListener('click', changeColor);
+connectorButton.addEventListener('click', getPersonalData);
+gradientColor.addEventListener('click', gradientColorChange);
