@@ -2,3 +2,22 @@
 
 @import 'modules/variables';
 @import 'modules/base';
+
+
+.test-btn {
+  background-color: red ;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .test-btn {
+    background-color: lightblue;
+  }
+}
+
+
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  .test-btn {
+    background-color: green;
+  }
+}
