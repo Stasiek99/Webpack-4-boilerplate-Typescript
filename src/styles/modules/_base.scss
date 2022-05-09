@@ -2,25 +2,5 @@
 *:before,
 *:after {
   box-sizing: inherit;
-  background: #D2E4E2;
-}
-
-html {
-  box-sizing: border-box;
-  color: $primary-color;
-  font-family: $primary-font;
-  background: #D2E4E2;
-}
-
-.center {
-  text-align: center;
-  background: #D2E4E2;
-  color: #473F3A;
-}
-
-.colorOfSimpleGameButton {
-  background: bisque;
-}
-.gradientChange {
-  background: linear-gradient(to bottom, #79A09A, #9521CE);
+  background-color: #D2E4E2;
 }
