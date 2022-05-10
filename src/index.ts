@@ -24,4 +24,4 @@ gradientColor.addEventListener('click', gradientColorChange);
 gameButton.addEventListener("mouseover", changeCSSClass);
 gameButton.addEventListener("mouseout", backToNormal);
 cloneCardButton.addEventListener("click", checkCardNumber);
-formSubmitButton.addEventListener('click', formSubmitted);
+formSubmitButton.addEventListener('submit', formSubmitted);

@@ -59,6 +59,7 @@ export function changeCSSClass() {
 export function backToNormal() {
     document.getElementById("simpleGame").className = "btn btn-secondary";
 }
-export function formSubmitted(){
+export function formSubmitted(event:Event){
+    event.preventDefault();
     console.log("Submitted!");
 }
