@@ -12,6 +12,8 @@ import {backToNormal} from "./event-side-effects";
 import {cloneCardButton} from "./event-side-effects";
 import {checkCardNumber} from "./clone-card-function";
 import {formSubmitted} from "./event-side-effects";
+import {formButton} from "./new-form-function";
+import {formSwich} from "./new-form-function";
 
 const testMessage: string = 'TypeScript works';
 console.log(testMessage);
@@ -25,3 +27,4 @@ gameButton.addEventListener("mouseover", changeCSSClass);
 gameButton.addEventListener("mouseout", backToNormal);
 cloneCardButton.addEventListener("click", checkCardNumber);
 formSubmitButton.addEventListener('submit', formSubmitted);
+formButton.addEventListener('click', formSwich);
