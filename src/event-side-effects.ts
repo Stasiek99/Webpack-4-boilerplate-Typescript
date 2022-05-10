@@ -2,6 +2,7 @@ export const gameButton= document.getElementById("simpleGame") as HTMLButtonElem
 export const connectorButton= document.getElementById("personalInfo") as HTMLButtonElement;
 export const gradientColor = document.getElementById("changeClass") as HTMLButtonElement;
 export const cloneCardButton = document.getElementById("cloneCard") as HTMLButtonElement;
+export const formSubmitButton = document.getElementById("submitButton") as HTMLButtonElement;
 export function chooseNumber(): void {
     const drawTicket = Math.floor((Math.random() * 100) + 1);
     let number;
@@ -56,5 +57,8 @@ export function changeCSSClass() {
     document.getElementById("simpleGame").className = "btn btn-danger";
 }
 export function backToNormal() {
-    document.getElementById("simpleGame").className = "btn btn-secondary"
+    document.getElementById("simpleGame").className = "btn btn-secondary";
+}
+export function formSubmitted(){
+    console.log("Submitted!");
 }

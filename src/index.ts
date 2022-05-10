@@ -1,5 +1,5 @@
 import './styles/style.scss';
-import {cursorOnButton} from './event-side-effects';
+import {cursorOnButton, formSubmitButton} from './event-side-effects';
 import {changeColor} from "./event-side-effects";
 import {getPersonalData} from "./event-side-effects";
 import {gradientColorChange} from "./event-side-effects";
@@ -11,6 +11,7 @@ import {changeCSSClass} from "./event-side-effects";
 import {backToNormal} from "./event-side-effects";
 import {cloneCardButton} from "./event-side-effects";
 import {checkCardNumber} from "./clone-card-function";
+import {formSubmitted} from "./event-side-effects";
 
 const testMessage: string = 'TypeScript works';
 console.log(testMessage);
@@ -23,3 +24,4 @@ gradientColor.addEventListener('click', gradientColorChange);
 gameButton.addEventListener("mouseover", changeCSSClass);
 gameButton.addEventListener("mouseout", backToNormal);
 cloneCardButton.addEventListener("click", checkCardNumber);
+formSubmitButton.addEventListener('click', formSubmitted);

@@ -92,6 +92,55 @@
                     Add new card
                 </button>
             </h1>
+    <section>
+        <form>
+            <h3>Registration</h3>
+            <div class="row g-3 align-items-center">
+                <div class="col-auto">
+                    <label for="inputFullName" class="form-label">Full Name</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" class="form-control" id="inputFullName">
+                </div>
+                <div class="col-auto">
+                    <label for="selectSex" class="form-label">Choose gender</label>
+                    <select id="selectSex" class="form-select">
+                        <option>Man</option>
+                        <option>Woman</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpBlock">
+                    <div id="passwordHelpBlock" class="form-text">
+                        Choose your password
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <label for="selectNationality" class="form-label">Choose nationality</label>
+                    <select id="selectNationality" class="form-select">
+                        <option>Polish</option>
+                        <option>English</option>
+                        <option>Danish</option>
+                        <option>Pakistani</option>
+                        <option>Zimbabwean</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <input type="checkbox" class="form-check-input" id="animalCheck">
+                    <label class="form-check-label" for="animalCheck">Do you have an animal?</label>
+                </div>
+                <div class="col-auto input-group mb-3">
+                        <label class="input-group-text" for="inputGroupFile01">Upload image</label>
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                </div>
+                <h1>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>
+                </h1>
+            </div>
+        </form>
+    <br>
+    </section>
         <section>
             <div class="container">
                 <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2" id="cards">
