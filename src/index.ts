@@ -1,5 +1,5 @@
 import './styles/style.scss';
-import {cursorOnButton, formSubmitButton} from './event-side-effects';
+import {cursorOnButton, submitForm} from './event-side-effects';
 import {changeColor} from "./event-side-effects";
 import {getPersonalData} from "./event-side-effects";
 import {gradientColorChange} from "./event-side-effects";
@@ -11,7 +11,7 @@ import {changeCSSClass} from "./event-side-effects";
 import {backToNormal} from "./event-side-effects";
 import {cloneCardButton} from "./event-side-effects";
 import {checkCardNumber} from "./clone-card-function";
-import {formSubmitted} from "./event-side-effects";
+import {submitFormHandler} from "./event-side-effects";
 import {formButton} from "./new-form-function";
 import {formSwitch} from "./new-form-function";
 
@@ -26,5 +26,5 @@ gradientColor.addEventListener('click', gradientColorChange);
 gameButton.addEventListener("mouseover", changeCSSClass);
 gameButton.addEventListener("mouseout", backToNormal);
 cloneCardButton.addEventListener("click", checkCardNumber);
-formSubmitButton.addEventListener('submit', formSubmitted);
+submitForm.addEventListener('submit', submitFormHandler);
 formButton.addEventListener('click', formSwitch);
