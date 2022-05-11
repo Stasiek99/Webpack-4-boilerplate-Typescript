@@ -1,4 +1,4 @@
-export const formButton = document.getElementById("showForm") as HTMLButtonElement;
+export const formButton = document.getElementById("showFormButton") as HTMLButtonElement;
 
 export function showForm(){
     document.getElementById("form").className = "showForm";
@@ -12,13 +12,13 @@ export function hideForm(){
 export function changeFormButtonToDefault(){
     document.getElementById("showFormButton").innerHTML = "Show Form";
 }
-export function formSwich(){
+export function formSwitch(){
     if (formButton.classList.contains("hideForm")){
-        showForm();
-        changeFormButton();
+        formButton.addEventListener('click', showForm);
+        formButton.addEventListener('click', changeFormButton);
     }
     else {
-        hideForm();
-        changeFormButtonToDefault();
+        formButton.addEventListener('click', hideForm);
+        formButton.addEventListener('click', changeFormButtonToDefault);
     }
 }
