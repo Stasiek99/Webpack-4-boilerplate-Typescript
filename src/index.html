@@ -98,7 +98,7 @@
                     Show Form
                 </button>
             </h1>
-    <section>
+    <section class="formSection">
         <form class="hideForm" id="form">
             <h3>Registration</h3>
             <div class="row g-3 align-items-center">
@@ -106,18 +106,18 @@
                     <label for="inputFullName" class="form-label">Full Name</label>
                 </div>
                 <div class="col-auto">
-                    <input type="text" class="form-control" id="inputFullName">
+                    <input type="text" class="form-control" id="inputFullName" required>
                 </div>
                 <div class="col-auto">
-                    <label for="selectSex" class="form-label">Choose gender</label>
-                    <select id="selectSex" class="form-select">
+                    <label for="selectGender" class="form-label">Choose gender</label>
+                    <select id="selectGender" class="form-select">
                         <option>Man</option>
                         <option>Woman</option>
                     </select>
                 </div>
                 <div class="col-auto">
                     <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpBlock">
+                    <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpBlock" required>
                     <div id="passwordHelpBlock" class="form-text">
                         Choose your password
                     </div>
@@ -137,8 +137,8 @@
                     <label class="form-check-label" for="animalCheck">Do you have an animal?</label>
                 </div>
                 <div class="col-auto input-group mb-3">
-                        <label class="input-group-text" for="inputGroupFile01">Upload image</label>
-                        <input type="file" class="form-control" id="inputGroupFile01">
+                        <label class="input-group-text" for="inputFile">Upload image</label>
+                        <input type="file" class="form-control" id="inputFile">
                 </div>
             </div>
 
